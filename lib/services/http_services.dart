@@ -2,14 +2,9 @@ import 'package:dio/dio.dart';
 
 class HttpServices {
   Dio _dio;
-  // var baseUrl = "";
 
   HttpServices() {
-    // print("Sanket HTP SERVIce $seledate");
-    _dio = Dio(BaseOptions(
-      baseUrl:
-          "https://api.nasa.gov/planetary/apod?api_key=aWPhODExHc5j48m59viPzCysv1jkoaN7ID2dchPw&date=2017-07-10",
-    ));
+    _dio = Dio();
     initializeInterceptors();
   }
   Future<Response> getRequest(String endPoint) async {
